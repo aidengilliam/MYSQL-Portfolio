@@ -85,7 +85,7 @@ WHERE popularity > 70
 Order BY popularity DESC;
 
 
---3) Find the top 5 most robust Marvel characters based on attribute data.
+--3) Identify the top 5 most robust Marvel characters based on attribute data within the table.
 select name, alignment
 intelligence+strength+speed+durability+energy_Projection+fighting_Skills as strongest 
 from marvels 
@@ -93,7 +93,7 @@ order by strongest desc
 limit 5
 
 
---4) Heroes Vs Villians, which class is stronger?
+--4) Heroes Vs Villians, which class is stronger? 
 WITH strongest AS (
 SELECT 
 name, 
