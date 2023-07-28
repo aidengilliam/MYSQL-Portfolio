@@ -99,7 +99,7 @@ from sales
 
 --OBJECTIVES:
 
---1) Total Sales Per Account
+--1) Find Total Sales Per each Account
 select 
 customer_name,
 sum(unit_price * quantity) as sales_per_account
@@ -107,7 +107,7 @@ from sales
 group by customer_name, product_name
 order by customer_name
 
---2) Top customer this month (by purchases)
+--2) Identify our customer base this month (by purchases) from highest contributor towards sales to lowest.
 select
 customer_name,
 sum(quantity) as count
@@ -115,7 +115,7 @@ from sales
 group by customer_name, quantity
 order by count desc
 
---3) number of products sold this month from highest to lowest --- this is important because it lets us know what products are favortable and whats not
+--3) Identify the number of products sold this month from highest to lowest
 select 
 product_name,
 count(product_name) as product_sold
@@ -124,7 +124,7 @@ group by product_name
 order by product_sold desc
 
 
---4) The highest revenue-generating item ---this is important because we can track these items when it comes to determining if anything should be discounted
+--4) Identify The highest revenue-generating item 
 select 
 product_name,
 sum(unit_price) as unit_price
@@ -132,7 +132,7 @@ from sales
 group by product_name
 order by unit_price desc;
 
---5) Total Revenue generated this month
+--5) Present the Total Amount of Revenue generated this month
 with sales_per_account as(
 select 
 product_name,
@@ -153,5 +153,7 @@ the company's revenue. Additionally, I proficiently employed SQL to implement so
 parameters such as the frequency of purchases in the last six months, total spending over the past year, and the recency of the last purchase. 
 This strategic application of clustering techniques effectively categorized customers into well-defined segments, 
 including loyal patrons, occasional buyers, and one-time shoppers. 
+
+a)How can the work I've done optimize the generation of business insights?
 These insights offer valuable guidance for targeted marketing strategies and personalized approaches, fostering enhanced customer 
 engagement and long-term profitability.
