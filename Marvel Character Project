@@ -106,8 +106,7 @@ SELECT alignment, SUM(strongest) AS combined_attribute_scores
 FROM strongest
 GROUP BY alignment;
 
-Summary:
+
 How can the work I've done optimize the generation of business insights?
 I applied data mining techniques to collect comprehensive physical, attributable, and popularity data for each  Marvel character. This data could help inform 
 stakeholders to propose marketing/branding strategies leveraging the characters' popularity and physical prowess as valuable insights for targeted promotional campaigns. 
-
