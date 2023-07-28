@@ -1,0 +1,162 @@
+CREATE TABLE sales (
+  transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+  product_name VARCHAR(255),
+  sale_date DATE,
+  sale_time TIME,
+  quantity INT,
+  unit_price DECIMAL(10, 2),
+  customer_name VARCHAR(255),
+  payment_method VARCHAR(255)
+);
+
+INSERT INTO sales (product_name, sale_date, sale_time, quantity, unit_price, customer_name, payment_method) VALUES
+('Widget A', '2023-07-01', '10:15:00', 5, 10.99, 'John Doe', 'Credit Card'),
+('Gadget B', '2023-07-02', '14:30:00', 2, 29.99, 'Jane Smith', 'Cash'),
+('Widget C', '2023-07-03', '09:45:00', 3, 15.49, 'Bob Johnson', 'PayPal'),
+('Gadget A', '2023-07-04', '11:20:00', 1, 39.95, 'Alice Williams', 'Credit Card'),
+('Widget B', '2023-07-05', '16:00:00', 4, 12.75, 'Mike Brown', 'Cash'),
+('Gadget C', '2023-07-06', '13:10:00', 2, 32.50, 'Sarah Lee', 'Credit Card'),
+('Widget A', '2023-07-07', '10:30:00', 2, 10.99, 'Emily Davis', 'Cash'),
+('Gadget B', '2023-07-08', '14:45:00', 3, 29.99, 'David Wilson', 'PayPal'),
+('Widget C', '2023-07-09', '09:55:00', 1, 15.49, 'Daniel Taylor', 'Credit Card'),
+('Gadget A', '2023-07-10', '11:25:00', 4, 39.95, 'Olivia Martinez', 'Cash'),
+('Widget B', '2023-07-11', '16:15:00', 2, 12.75, 'Sophia Anderson', 'Credit Card'),
+('Gadget C', '2023-07-12', '13:20:00', 1, 32.50, 'Michael Miller', 'PayPal'),
+('Widget A', '2023-07-13', '10:05:00', 3, 10.99, 'Christopher Clark', 'Credit Card'),
+('Gadget B', '2023-07-14', '14:15:00', 2, 29.99, 'Ava Lewis', 'Cash'),
+('Widget C', '2023-07-15', '09:25:00', 1, 15.49, 'James Hall', 'PayPal'),
+('Gadget A', '2023-07-16', '11:45:00', 4, 39.95, 'Elizabeth Turner', 'Credit Card'),
+('Widget B', '2023-07-17', '16:30:00', 2, 12.75, 'Mia Allen', 'Cash'),
+('Gadget C', '2023-07-18', '13:50:00', 3, 32.50, 'Ethan Scott', 'Credit Card'),
+('Widget A', '2023-07-19', '10:20:00', 1, 10.99, 'Alexander Baker', 'Cash'),
+('Gadget B', '2023-07-20', '14:55:00', 2, 29.99, 'Harper Hill', 'PayPal'),
+('Widget C', '2023-07-21', '09:35:00', 5, 15.49, 'Evelyn Green', 'Credit Card'),
+('Gadget A', '2023-07-22', '11:55:00', 2, 39.95, 'William Cook', 'Cash'),
+('Widget B', '2023-07-23', '16:45:00', 3, 12.75, 'Sofia Murphy', 'Credit Card'),
+('Gadget C', '2023-07-24', '13:55:00', 4, 32.50, 'Henry Brooks', 'PayPal'),
+('Widget A', '2023-07-25', '10:10:00', 2, 10.99, 'Scarlett Wright', 'Credit Card'),
+('Gadget B', '2023-07-26', '14:20:00', 3, 29.99, 'Lucas King', 'Cash'),
+('Widget C', '2023-07-27', '09:30:00', 4, 15.49, 'Aiden Adams', 'PayPal'),
+('Gadget A', '2023-07-28', '11:50:00', 1, 39.95, 'Ella Rivera', 'Credit Card'),
+('Widget B', '2023-07-29', '16:35:00', 2, 12.75, 'Victoria Long', 'Cash'),
+('Gadget C', '2023-07-30', '13:55:00', 3, 32.50, 'Joseph Foster', 'Credit Card'),
+('Widget A', '2023-07-31', '10:25:00', 2, 10.99, 'Charles Simmons', 'Cash'),
+('Gadget B', '2023-08-01', '14:58:00', 1, 29.99, 'Grace Price', 'PayPal'),
+('Widget C', '2023-08-02', '09:40:00', 5, 15.49, 'Samuel Kelly', 'Credit Card'),
+('Gadget A', '2023-08-03', '11:59:00', 3, 39.95, 'Avery Bailey', 'Cash'),
+('Widget B', '2023-08-04', '16:50:00', 2, 12.75, 'Daniel Reed', 'Credit Card'),
+('Gadget C', '2023-08-05', '13:59:00', 4, 32.50, 'Madison Coleman', 'PayPal'),
+('Widget A', '2023-07-25' , '10:10:00', 2, 10.99, 'Scarlett Wright', 'Credit Card'),
+('Widget A', '2023-07-26', '14:20:00' ,3, 10.99, 'Lucas King', 'Cash'),
+('Widget A', '2023-07-28', '11:50:00', 1,10.99, 'Ella Rivera', 'Credit Card'),
+('Widget A', '2023-07-31', '10:25:00', 3, 10.99, 'Charles Simmons', 'Cash'),
+('Widget A', '2023-08-06', '10:10:00', 2, 10.99, 'Sophia Roberts', 'Credit Card'),
+('Widget A', '2023-07-01', '10:15:00', 5, 10.99, 'John Doe', 'Credit Card'),
+('Gadget B', '2023-07-02', '14:30:00', 2, 29.99, 'Jane Smith', 'Cash'),
+('Widget C', '2023-07-03', '09:45:00', 3, 15.49, 'Bob Johnson', 'PayPal'),
+('Gadget A', '2023-07-04', '11:20:00', 1, 39.95, 'Alice Williams', 'Credit Card'),
+('Widget B', '2023-07-05', '16:00:00', 4, 12.75, 'Mike Brown', 'Cash'),
+('Gadget C', '2023-07-06', '13:10:00', 2, 32.50, 'Sarah Lee', 'Credit Card'),
+('Widget A', '2023-07-07', '10:30:00', 2, 10.99, 'Emily Davis', 'Cash'),
+('Gadget B', '2023-07-08', '14:45:00', 3, 29.99, 'David Wilson', 'PayPal'),
+('Widget C', '2023-07-09', '09:55:00', 1, 15.49, 'Daniel Taylor', 'Credit Card'),
+('Gadget A', '2023-07-10', '11:25:00', 4, 39.95, 'Olivia Martinez', 'Cash'),
+('Widget B', '2023-07-11', '16:15:00', 2, 12.75, 'Sophia Anderson', 'Credit Card'),
+('Gadget C', '2023-07-12', '13:20:00', 1, 32.50, 'Michael Miller', 'PayPal'),
+('Widget A', '2023-07-13', '10:05:00', 3, 10.99, 'Christopher Clark', 'Credit Card'),
+('Gadget B', '2023-07-14', '14:15:00', 2, 29.99, 'Ava Lewis', 'Cash'),
+('Widget C', '2023-07-15', '09:25:00', 1, 15.49, 'James Hall', 'PayPal'),
+('Gadget A', '2023-07-16', '11:45:00', 4, 39.95, 'Elizabeth Turner', 'Credit Card'),
+('Widget B', '2023-07-17', '16:30:00', 2, 12.75, 'Mia Allen', 'Cash'),
+('Gadget C', '2023-07-18', '13:50:00', 3, 32.50, 'Ethan Scott', 'Credit Card'),
+('Widget A', '2023-07-19', '10:20:00', 1, 10.99, 'Alexander Baker', 'Cash'),
+('Gadget B', '2023-07-20', '14:55:00', 2, 29.99, 'Harper Hill', 'PayPal'),
+('Widget C', '2023-07-21', '09:35:00', 5, 15.49, 'Evelyn Green', 'Credit Card'),
+('Gadget A', '2023-07-22', '11:55:00', 2, 39.95, 'William Cook', 'Cash'),
+('Widget B', '2023-07-23', '16:45:00', 3, 12.75, 'Sofia Murphy', 'Credit Card'),
+('Gadget C', '2023-07-24', '13:55:00', 4, 32.50, 'Henry Brooks', 'PayPal'),
+('Widget A', '2023-07-25', '10:10:00', 2, 10.99, 'Scarlett Wright', 'Credit Card'),
+('Gadget B', '2023-07-26', '14:20:00', 3, 29.99, 'Lucas King', 'Cash'),
+('Widget C', '2023-07-27', '09:30:00', 4, 15.49, 'Aiden Adams', 'PayPal'),
+('Gadget A', '2023-07-28', '11:50:00', 1, 39.95, 'Ella Rivera', 'Credit Card'),
+('Widget B', '2023-07-29', '16:35:00', 2, 12.75, 'Victoria Long', 'Cash'),
+('Gadget C', '2023-07-30', '13:55:00', 3, 32.50, 'Joseph Foster', 'Credit Card'),
+('Widget A', '2023-07-31', '10:25:00', 2, 10.99, 'Charles Simmons', 'Cash'),
+('Gadget B', '2023-08-01', '14:58:00', 1, 29.99, 'Grace Price', 'PayPal'),
+('Widget C', '2023-08-02', '09:40:00', 5, 15.49, 'Samuel Kelly', 'Credit Card'),
+('Gadget A', '2023-08-03', '11:59:00', 3, 39.95, 'Avery Bailey', 'Cash'),
+('Widget B', '2023-08-04', '16:50:00', 2, 12.75, 'Daniel Reed', 'Credit Card'),
+('Gadget C', '2023-08-05', '13:59:00', 4, 32.50, 'Madison Coleman', 'PayPal'),
+('Widget A', '2023-07-25' , '10:10:00', 2, 10.99, 'Scarlett Wright', 'Credit Card'),
+('Widget A', '2023-07-26', '14:20:00' ,3, 10.99, 'Lucas King', 'Cash'),
+('Widget A', '2023-07-28', '11:50:00', 1,10.99, 'Ella Rivera', 'Credit Card'),
+('Widget A', '2023-07-31', '10:25:00', 3, 10.99, 'Charles Simmons', 'Cash'),
+('Widget A', '2023-08-06', '10:10:00', 2, 10.99, 'Sophia Roberts', 'Credit Card');
+
+
+select *
+from sales
+
+--Total Sales Per Account
+select 
+customer_name,
+sum(unit_price * quantity) as sales_per_account
+from sales
+group by customer_name, product_name
+order by customer_name
+
+-- Top customer this month (by purchases)
+select
+customer_name,
+sum(quantity) as count
+from sales
+group by customer_name, quantity
+order by count desc
+
+-- number of product sold this month from highest to lowest --- this is important because it lets us know what products are favortable and whats not
+select 
+product_name,
+count(product_name) as product_sold
+from sales
+group by product_name
+order by product_sold desc
+
+
+--The highest revenue generating item ---this is important because we can track these items when it comes to determining if anything should be discounted
+select 
+product_name,
+sum(unit_price) as unit_price
+from sales
+group by product_name
+order by unit_price desc;
+
+--Total Revenue generated this month
+with sales_per_account as(
+select 
+product_name,
+sale_date,
+(unit_price * quantity) as sales_per_account
+from sales
+)
+select 
+sum(sales_per_account) as monthly_revenue_generated
+from sales_per_account
+order by monthly_revenue_generated
+
+
+# How this can answer business problems or help a business out.
+Example: First, I used SQL to calculate various customer metrics such as total spending, purchase frequency, and average order value. 
+These metrics are essential in identifying high-value customers who make frequent and substantial purchases, contributing significantly to
+the company's revenue.
+
+Next, I utilized SQL to implement clustering algorithms that group customers based on their purchasing behavior. I considered factors like
+the number of purchases in the last six months, total spending in the past year, and the recency of the last purchase. By applying these 
+clustering techniques, I categorized customers into distinct segments, such as loyal customers, occasional buyers, and one-time shoppers.
+
+Furthermore, I created SQL queries to generate visualizations, such as bar charts and pie charts, to illustrate the distribution of 
+customer segments and their corresponding contributions to the company's revenue.
+
+Finally, I presented the findings in a comprehensive report using Tableau / Power BI, highlighting the unique characteristics of each 
+customer segment and providing actionable recommendations for targeted marketing campaigns. By leveraging SQL to perform customer 
+segmentation, the e-commerce company gained valuable insights into its customer base, enabling them to tailor marketing strategies, 
+improve customer retention, and optimize revenue generation.
