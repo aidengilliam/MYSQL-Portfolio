@@ -73,6 +73,10 @@ INSERT INTO series (title, released_year, genre) VALUES
 
     select *
     from serires
+
+
+
+--OBJECTIVES----
     
     --- 1) Exploring each titles average rating from every user for each tv show on Netflix in order from lowest rating to highest.
      select title, AVG(rating) AS AVG_Rating 
@@ -113,7 +117,9 @@ with distinct_genre as (
   SELECT genre, id, ROW_NUMBER() OVER (PARTITION BY genre ORDER BY genre) AS row_num
   FROM series
 )
-SELECT genre, AVG(rating) AS AVG_rating
+SELECT 
+genre, 
+AVG(rating) AS AVG_rating
 FROM distinct_genre a
 INNER JOIN reviews b ON a.id = b.series_id
 WHERE a.row_num = 1
@@ -134,7 +140,7 @@ INNER JOIN series c
  ON c.id = b.series_id
 ORDER BY title;
 
-How can this help a business out? 
+How can the work I've done optimize the generation of business insights?
 Conducting an in-depth analysis of user ratings for each TV show on Netflix, I systematically organize the average ratings attributed to 
 each title from different tables to order the ratings from lowest to highest, identified the unreviewed TV series within the database, and aggregated 
 review averages to unveil valuable insights into audience preferences and show popularity.  This approach fosters data-driven insights to empower strategic content 
