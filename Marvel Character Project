@@ -99,3 +99,8 @@ WHERE alignment LIKE '%Hero%' OR alignment LIKE '%Villain%'
 SELECT alignment, SUM(strongest) AS combined_attribute_scores
 FROM strongest
 GROUP BY alignment;
+
+# How this can answer business problems or help a business out.
+Applied data mining techniques to collect comprehensive physical, attributable, and popularity data for each  Marvel character. This data could help inform 
+stakeholders to propose marketing/branding strategies leveraging the characters' popularity and physical prowess as valuable insights for targeted promotional campaigns. 
+
