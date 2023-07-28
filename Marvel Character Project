@@ -45,7 +45,10 @@ INSERT INTO marvels VALUES(26, "Professor X", 58, "Good", "Male", 1.83, 86, "EUA
 INSERT INTO marvels VALUES(27, "Black Panther", 100, "Good", "Male", 1.90, 93, "Wakanda", 8, 6, 4, 8, 5, 6);
 INSERT INTO marvels VALUES(28, "Ultron", 75, "Evil", "Male", 1.50, 61, "USA", 4, 2, 7, 5, 9, 6);
 
---DATA CLEANING please ignore--
+
+
+
+--DATA CLEANING please ignore the script within the dashes :)--
 UPDATE marvels
 SET alignment = 'Hero'
 WHERE alignment = 'Good';
@@ -63,6 +66,9 @@ WHERE alignment = 'Evil';
 select *
 from marvels
 ------------------------------------
+
+
+
 --Objectives:
 
 --1) Find the average height for all Marvel characters.
