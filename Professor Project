@@ -52,6 +52,6 @@ SELECT first_name, AVG(grade)
     GROUP BY first_name;
 
 # How this can answer business problems or help a business out.
-Aggregating and analyzing student data can help stakeholders identify departmental areas that might need enhancement, 
-which can lead to data-driven improvements in teaching methodologies, curricula, and student/teacher support services.
+Aggregating and analyzing student data can help stakeholders identify departmental areas that might need enhancement, which can lead to data-driven 
+improvements in teaching methodologies, curricula, and student/teacher support services.
 
