@@ -87,7 +87,7 @@ order by strongest desc
 limit 5
 
 
--- Heroes Vs Villians, who's stronger?
+-- Heroes Vs Villians, which class is stronger?
 WITH strongest AS (
 SELECT 
 name, 
