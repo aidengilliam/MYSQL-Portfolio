@@ -45,6 +45,7 @@ INSERT INTO marvels VALUES(26, "Professor X", 58, "Good", "Male", 1.83, 86, "EUA
 INSERT INTO marvels VALUES(27, "Black Panther", 100, "Good", "Male", 1.90, 93, "Wakanda", 8, 6, 4, 8, 5, 6);
 INSERT INTO marvels VALUES(28, "Ultron", 75, "Evil", "Male", 1.50, 61, "USA", 4, 2, 7, 5, 9, 6);
 
+--DATA CLEANING please ignore--
 UPDATE marvels
 SET alignment = 'Hero'
 WHERE alignment = 'Good';
@@ -59,19 +60,18 @@ UPDATE marvels
 SET alignment = 'Villain'
 WHERE alignment = 'Evil';
 
-
 select *
 from marvels
+------------------------------------
+--Objectives:
 
-
-
---Find the average height for all Marvel characters.
+--1) Find the average height for all Marvel characters.
 
 SELECT ROUND(AVG(height_m)) AS AVG_Height 
 FROM marvels
 GROUP BY height_m;
 
---Find the name and the popularity of all Marvel characters where their popularity is greater than 70.
+--2) Find the name and the popularity of all Marvel characters where their popularity is greater than 70.
 
 SELECT name, popularity 
 FROM marvels 
@@ -79,7 +79,7 @@ WHERE popularity > 70
 Order BY popularity DESC;
 
 
--- Find the top 5 most robust Marvel characters based on attribute data.
+--3) Find the top 5 most robust Marvel characters based on attribute data.
 select name, alignment
 intelligence+strength+speed+durability+energy_Projection+fighting_Skills as strongest 
 from marvels 
@@ -87,7 +87,7 @@ order by strongest desc
 limit 5
 
 
--- Heroes Vs Villians, which class is stronger?
+--4) Heroes Vs Villians, which class is stronger?
 WITH strongest AS (
 SELECT 
 name, 
@@ -100,8 +100,8 @@ SELECT alignment, SUM(strongest) AS combined_attribute_scores
 FROM strongest
 GROUP BY alignment;
 
-
-What have I done and how can these tasks be optimized to drive business insights?
-Applied data mining techniques to collect comprehensive physical, attributable, and popularity data for each  Marvel character. This data could help inform 
+Summary:
+How can the work I've done optimize the generation of business insights?
+I applied data mining techniques to collect comprehensive physical, attributable, and popularity data for each  Marvel character. This data could help inform 
 stakeholders to propose marketing/branding strategies leveraging the characters' popularity and physical prowess as valuable insights for targeted promotional campaigns. 
 
