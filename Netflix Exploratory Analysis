@@ -39,7 +39,8 @@ INSERT INTO series (title, released_year, genre) VALUES
     ('Malcolm In The Middle', 2000, 'Comedy'),
     ('Pushing Daisies', 2007, 'Comedy'),
     ('Seinfeld', 1989, 'Comedy'),
-    ('Stranger Things', 2016, 'Drama');
+    ('Stranger Things', 2016, 'Drama'),
+    ('The Office', 2005, 'Comedy');
     
     INSERT INTO reviewers (first_name, last_name) VALUES
     ('Thomas', 'Stoneman'),
@@ -132,3 +133,10 @@ INNER JOIN reviews b
 INNER JOIN series c
  ON c.id = b.series_id
 ORDER BY title;
+
+How can this help a business out? 
+Conducting an in-depth analysis of user ratings for each TV show on Netflix, I systematically organize the average ratings attributed to 
+each title from different tables to order the ratings from lowest to highest, identified the unreviewed TV series within the database, and aggregated 
+review averages to unveil valuable insights into audience preferences and show popularity.  This approach fosters data-driven insights to empower strategic content 
+curation and a better understanding of user engagement to contribute to greater operational successes of the streaming platform.
+
