@@ -97,7 +97,9 @@ INSERT INTO sales (product_name, sale_date, sale_time, quantity, unit_price, cus
 select *
 from sales
 
---Total Sales Per Account
+--OBJECTIVES:
+
+--1) Total Sales Per Account
 select 
 customer_name,
 sum(unit_price * quantity) as sales_per_account
@@ -105,7 +107,7 @@ from sales
 group by customer_name, product_name
 order by customer_name
 
--- Top customer this month (by purchases)
+--2) Top customer this month (by purchases)
 select
 customer_name,
 sum(quantity) as count
@@ -113,7 +115,7 @@ from sales
 group by customer_name, quantity
 order by count desc
 
--- number of product sold this month from highest to lowest --- this is important because it lets us know what products are favortable and whats not
+--3) number of products sold this month from highest to lowest --- this is important because it lets us know what products are favortable and whats not
 select 
 product_name,
 count(product_name) as product_sold
@@ -122,7 +124,7 @@ group by product_name
 order by product_sold desc
 
 
---The highest revenue generating item ---this is important because we can track these items when it comes to determining if anything should be discounted
+--4) The highest revenue-generating item ---this is important because we can track these items when it comes to determining if anything should be discounted
 select 
 product_name,
 sum(unit_price) as unit_price
@@ -130,7 +132,7 @@ from sales
 group by product_name
 order by unit_price desc;
 
---Total Revenue generated this month
+--5) Total Revenue generated this month
 with sales_per_account as(
 select 
 product_name,
@@ -144,13 +146,12 @@ from sales_per_account
 order by monthly_revenue_generated
 
 
-# How this can answer business problems or help a business out.
-Example: First, I used SQL to calculate various customer metrics such as total spending, purchase frequency, and average order value. 
+Summary:
+First, I used SQL to calculate various customer metrics such as total spending, purchase frequency, and average order value. 
 These metrics are essential in identifying high-value customers who make frequent and substantial purchases, contributing significantly to
 the company's revenue. Additionally, I proficiently employed SQL to implement sophisticated clustering algorithms, utilizing key purchasing behavior
 parameters such as the frequency of purchases in the last six months, total spending over the past year, and the recency of the last purchase. 
 This strategic application of clustering techniques effectively categorized customers into well-defined segments, 
 including loyal patrons, occasional buyers, and one-time shoppers. 
-These insights offer valuable guidance for targeted marketing strategies and personalized approaches, fostering enhanced customer engagement and long-term profitability.
-
-
+These insights offer valuable guidance for targeted marketing strategies and personalized approaches, fostering enhanced customer 
+engagement and long-term profitability.
