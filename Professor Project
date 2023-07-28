@@ -20,6 +20,9 @@ INSERT INTO papers (students_ID, title, grade ) VALUES
 (4, 'Borges and Magical Realism', 89);
 
 
+
+---OBJECTIVES
+
 1) Retrieve data containing information on students who have achieved completion of their title/grade and order it from highest to lowest grades. Exclude null results. ***
 select first_name, title, grade 
 FROM students 
@@ -51,7 +54,7 @@ SELECT first_name, AVG(grade)
       ON students.id = papers.students_id
     GROUP BY first_name;
 
-# How this can answer business problems or help a business out.
+# How can the work I've done optimize the generation of business insights?
 Aggregating and analyzing student data can help stakeholders identify departmental areas that might need enhancement, which can lead to data-driven 
 improvements in teaching methodologies, curricula, and student/teacher support services.
 
