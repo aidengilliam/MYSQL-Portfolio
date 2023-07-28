@@ -65,7 +65,7 @@ from marvels
 
 
 
---Find the average height for all Marvel characters
+--Find the average height for all Marvel characters.
 
 SELECT ROUND(AVG(height_m)) AS AVG_Height 
 FROM marvels
@@ -79,7 +79,7 @@ WHERE popularity > 70
 Order BY popularity DESC;
 
 
--- Find the top 5 most robust Marvel character
+-- Find the top 5 most robust Marvel characters based on attribute data.
 select name, alignment
 intelligence+strength+speed+durability+energy_Projection+fighting_Skills as strongest 
 from marvels 
