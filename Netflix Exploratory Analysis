@@ -140,7 +140,7 @@ INNER JOIN series c
  ON c.id = b.series_id
 ORDER BY title;
 
-How can the work I've done optimize the generation of business insights?
+How can this approach optimize the generation of business insights?
 Conducting an in-depth analysis of user ratings for each TV show on Netflix, I systematically organize the average ratings attributed to 
 each title from different tables to order the ratings from lowest to highest, identified the unreviewed TV series within the database, and aggregated 
 review averages to unveil valuable insights into audience preferences and show popularity.  This approach fosters data-driven insights to empower strategic content 
